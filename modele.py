@@ -43,12 +43,16 @@ def cherche_occupant(lieu):
     if (lieu in equipement):
         liste = []
         for animals in animal:
-            if (lit_lieu(animals) == lieu):
+            if(lit_lieu(animals) == lieu):
                 liste.append(animals)
-                return liste
-            else:
-                print('Désolé ', lieu, ' n"est pas un équipement connu')
-                return None
+        if (liste == []):
+            print('Désolé, le lieu ',lieu,'est vide')
+            return liste
+        return liste
+                            
+            
+            
+            
             
 
 def change_état(id_animal, état):
