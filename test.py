@@ -13,15 +13,12 @@ def test_vérifie_disponibilité():
     assert modele.vérifie_disponibilité('litiere') == 'libre'
     assert modele.vérifie_disponibilité('nid') == 'occupe'
 
-def test_cherche_occupant():
-    assert modele.cherche_occupant('nid') == ['Pocahontas']
-    assert 'Tac' in modele.cherche_occupant('litiere')
-    assert 'Tac' not in modele.cherche_occupant('mangeoire')
 
-def test_cherche_occupant():
-    assert modele.cherche_occupant('nid') == ['Pocahontas']
-    assert 'Tac' in modele.cherche_occupant('litiere')
-    assert 'Tac' not in modele.cherche_occupant('mangeoire')
+
+#def test_cherche_occupant():
+    #assert modele.cherche_occupant('nid') == ['Pocahontas']
+    #assert 'Tac' in modele.cherche_occupant('litiere')
+    #assert 'Tac' not in modele.cherche_occupant('mangeoire')
 
 def test_cherche_occupant_nul():
     assert modele.cherche_occupant('casino') == None

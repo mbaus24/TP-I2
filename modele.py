@@ -80,5 +80,3 @@ def change_lieu(id_animal,lieu):
             print('Désolé ', id_animal, ' n"est pas un animal connu ou ',lieu,'n"est pas un équipement correct')
         return None
 
-print(cherche_occupant("nid"))
-print("nid" in equipement)
