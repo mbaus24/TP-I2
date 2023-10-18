@@ -3,7 +3,8 @@ import json
  
 from pony import orm
 
-
+from data_model import Equipement, Animal, db
+ 
 db = orm.Database()
  
 class Equipement(db.Entity):
