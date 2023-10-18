@@ -55,6 +55,9 @@ def change_etat(id_animal, etat):
             
 def change_lieu(id_animal, lieu):
     if lieu in liste_equipement:
+        if (verifie_disponibilite(lieu) == 'occupe'):
+            print('Desole, le lieu ',lieu,'est occupe')
+            return None
         with orm.db_session:
             try:
                 Animal[id_animal].lieu = Equipement[lieu]

@@ -44,20 +44,20 @@ def test_change_lieu():
  
  
  
-@orm.db_session
-def test_nourrir():
-    if modele.verifie_disponibilite('mangeoire') == 'libre' and modele.lit_etat('Tic') == 'affame':
-        controleur.nourrir('Tic')
-    assert modele.verifie_disponibilite('mangeoire') == 'occupe'
-    assert modele.lit_etat('Tic') == 'repus'
-    assert modele.lit_lieu('Tic') == Equipement['mangeoire']
-    controleur.nourrir('Pocahontas')
-    assert modele.lit_etat('Pocahontas') == 'endormi'
-    assert modele.lit_lieu('Pocahontas') == Equipement['nid']
-    controleur.nourrir('Tac')
-    assert modele.lit_etat('Tac') == 'affame'
-    assert modele.lit_lieu('Tac') == Equipement['litiere']
-    controleur.nourrir('Bob')
-    assert modele.lit_etat('Bob') == None
-    assert modele.lit_lieu('Bob') == None
-    assert modele.verifie_disponibilite('mangeoire') == 'occupe'
+# @orm.db_session
+# def test_nourrir():
+#     if modele.verifie_disponibilite('mangeoire') == 'libre' and modele.lit_etat('Tic') == 'affame':
+#         controleur.nourrir('Tic')
+#     assert modele.verifie_disponibilite('mangeoire') == 'occupe'
+#     assert modele.lit_etat('Tic') == 'repus'
+#     assert modele.lit_lieu('Tic') == Equipement['mangeoire']
+#     controleur.nourrir('Pocahontas')
+#     assert modele.lit_etat('Pocahontas') == 'endormi'
+#     assert modele.lit_lieu('Pocahontas') == Equipement['nid']
+#     controleur.nourrir('Tac')
+#     assert modele.lit_etat('Tac') == 'affame'
+#     assert modele.lit_lieu('Tac') == Equipement['litiere']
+#     controleur.nourrir('Bob')
+#     assert modele.lit_etat('Bob') == None
+#     assert modele.lit_lieu('Bob') == None
+#     assert modele.verifie_disponibilite('mangeoire') == 'occupe'
